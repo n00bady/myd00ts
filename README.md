@@ -6,4 +6,6 @@ Things you need to use this config in its fullest (for now, I will update the RE
 
 	i3lock
 	compton
+	feh
+	polkit-gnome-authentication-agent
 	(more to come)

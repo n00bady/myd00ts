@@ -184,3 +184,6 @@ exec compton
 
 # Maybe this will help in using pamac-manager
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Changing wallpaper
+exec ~/.fehbg
