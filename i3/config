@@ -176,6 +176,88 @@ bar {
         status_command i3status
 }
 
+# Colors ! ! ! color scheme goes under here :)
+# set colors
+set $Fborder  #16A085
+set $Fbg      #16A085
+set $Ftext    #E0E0E0
+set $Findi    #12dfda
+set $Fcb      #454947
+set $Ufborder #222222
+set $Ufbg     #2B2C2B
+set $black    #ffffff
+set $black2   #0c0c0c
+set $white    #000000
+set $urgent   #DFAF8F
+set $urgentbg #900000
+
+# class                 border       backgr.   text       indicator      child_border
+client.focused          $Fborder     $Fbg      $Ftext     $Findi         $Fcb
+client.focused_inactive $Ufborder    $Ufbg     $Ftext     $Findi         $Fcb
+client.unfocused        $Ufborder    $Ufbg     $Ftext     $Findi         $Fcb
+client.urgent           $urgent      $urgentbg $black     $Findi         $urgentbg
+client.placeholder      $white       $black2   $black     $Findi         $black2
+
+client.background       $black
+
+
+#############################
+### settings for i3-gaps: ###
+#############################
+
+# Set inner/outer gaps
+gaps inner 10
+gaps outer -4
+
+# Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
+# gaps inner|outer current|all set|plus|minus <px>
+# gaps inner all set 10
+# gaps outer all plus 5
+
+# Smart gaps (gaps used if only more than one container on the workspace)
+smart_gaps on
+
+# Smart borders (draw borders around container only if it is not the only container on this workspace) 
+# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
+smart_borders on
+
+# Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
 # i3Lock with custom background image
 bindsym $mod+x exec i3lock -i /home/jon/Pictures/screenlock.png
 
