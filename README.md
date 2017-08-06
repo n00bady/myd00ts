@@ -8,4 +8,5 @@ Things you need to use this config in its fullest (for now, I will update the RE
 	compton
 	feh
 	polkit-gnome-authentication-agent
+	xfce4-terminal (for the dropdown terminal)
 	(more to come)
