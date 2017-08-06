@@ -258,6 +258,9 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
+# xfce-terminal in drop-down mode
+bindsym F12 exec xfce4-terminal --drop-down
+
 # i3Lock with custom background image
 bindsym $mod+x exec i3lock -i /home/jon/Pictures/screenlock.png
 
