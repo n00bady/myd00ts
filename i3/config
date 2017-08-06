@@ -136,8 +136,19 @@ assign [class="Mousepad"] $ws3
 assign [class="Gedit"] $ws3
 assign [class="vlc"] $ws4
 
+# Some apps should start on floating mode
+for_window [class="Pamac-manager"] floating enable border pixel 3
+
+# And some want more borders :P
+for_window [class="Xfce4-terminal"] border pixel 1
+
+# Change titlebar and border
+new_window 1pixel
+new_float pixel 3
+hide_edge_borders vertical
+
 # Example for assigning programms to open specific applications in floating mode
-#for_window [title="alsamixer"] floating enable border pixel 1
+# for_window [title="alsamixer"] floating enable border pixel 1
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -178,15 +189,15 @@ bar {
         status_command i3status
 }
 
-# Colors ! ! ! color scheme goes under here :)
+# Colors ! ! ! color scheme goes under here :) 
 # set colors
 set $Fborder  #16A085
 set $Fbg      #16A085
 set $Ftext    #E0E0E0
 set $Findi    #12dfda
-set $Fcb      #454947
-set $Ufborder #222222
-set $Ufbg     #2B2C2B
+set $Fcb      #16A085
+set $Ufborder #316D61
+set $Ufbg     #454947
 set $black    #ffffff
 set $black2   #0c0c0c
 set $white    #000000
@@ -195,13 +206,13 @@ set $urgentbg #900000
 
 # class                 border       backgr.   text       indicator      child_border
 client.focused          $Fborder     $Fbg      $Ftext     $Findi         $Fcb
-client.focused_inactive $Ufborder    $Ufbg     $Ftext     $Findi         $Fcb
-client.unfocused        $Ufborder    $Ufbg     $Ftext     $Findi         $Fcb
+client.focused_inactive $Ufborder    $Ufbg     $Ftext     $Findi         $Ufbg
+client.unfocused        $Ufborder    $Ufbg     $Ftext     $Findi         $Ufbg
 client.urgent           $urgent      $urgentbg $black     $Findi         $urgentbg
 client.placeholder      $white       $black2   $black     $Findi         $black2
 
 client.background       $black
-
+# It's a mess ^ :/
 
 #############################
 ### settings for i3-gaps: ###
