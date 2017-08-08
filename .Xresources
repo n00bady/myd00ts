@@ -1,0 +1,19 @@
+#if __has_include(".extend.Xresources")
+#include ".extend.Xresources"
+#endif
+
+! ^ The above lines are no comments!
+! Leave them as they are if a file ~/.extend.Xresources is being used on your system.
+! config can be added there or also here below.
+! For comments use "!"
+
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: argb:d7353836, #16a085, #16a085
+rofi.color-normal: argb:c8444746, #e0e0e0, argb:ce313133, argb:d116a085, #e0e0e0
+rofi.color-active: argb:d1353836, #16a085, argb:ce313133, argb:d1316d61, #e0e0e0
+rofi.color-urgent: argb:c5353836, #dc322f, argb:ce313133, argb:d1dc322f, #e0e0e0
+rofi.separator-style:                dash
