@@ -9,4 +9,5 @@ Things you need to use this config in its fullest (for now, I will update the RE
 	feh
 	polkit-gnome-authentication-agent
 	xfce4-terminal (for the dropdown terminal)
+	i3blocks
 	(more to come)
