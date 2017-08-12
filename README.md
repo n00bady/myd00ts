@@ -2,12 +2,16 @@
 Learning to use git/github by uploading and maintaining my dot files. :)
 
 
-Things you need to use this config in its fullest (for now, I will update the README.md if there are any new changes).
+Things needed to use this config in its fullest (for now, I will update the README.md if there are any new changes).
 
+	i3blocks
 	i3lock
 	compton
 	feh
-	polkit-gnome-authentication-agent
-	xfce4-terminal (for the dropdown terminal)
-	i3blocks
-	(more to come)
+	
+	gtk theme: arc-maia-dark
+	icons: arc-maia
+	terminal: xfce4-terminal
+	
+	
+The distro I use is Manjaro and at the current setup is running on virtualbox until I deem it ready.
