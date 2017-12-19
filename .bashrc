@@ -49,6 +49,6 @@ colors() {
 eval $(thefuck --alias)
 
 # My aliases
-alias todo='sh /home/kazaboo/.local/bin/todo.sh'
+alias todo='sh /home/${USER}/.local/bin/todo.sh'
 
 
