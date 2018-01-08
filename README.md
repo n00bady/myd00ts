@@ -14,3 +14,4 @@ Things I use:
 	terminal: xfce4-terminal
 
 
+Started working on it again :) trying to combine i3gaps with xfce to have full "tiling DE".
